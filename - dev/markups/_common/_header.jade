@@ -1,0 +1,27 @@
+header.header
+    .header_top
+        .container
+            .header__left
+                - var icons = ['fb','vk','tw']
+                ul.socials
+                    each icon in icons
+                        li(class="socials__item socials__item" + icon)
+                            a(href="#").socials__link
+                                .socials__icon
+            .header__right
+                .address ул Маяковского 6 офис 17
+                a(href="tel:+79998887766").phone +7 999 888 77 66
+    .header__bottom
+        .container
+            a(href="#").logo
+                img(src="#" alc="logo").logo__img
+                .logo__text cooltech
+            .search
+                form.search__form
+                    input(name="" type="text" placeholder="ищем").search__form-input
+                    input(name="" type="submit" value="Выйти").search__form-submit
+            .menu
+                - var items=["Карта проезда","История заказов","Корзина"]
+                ul.menu__item
+                    li.menu__item
+                        a(href="#").menu__link= item
